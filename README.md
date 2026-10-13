@@ -341,7 +341,7 @@ History-only directories offer edit and new-session actions; rename and remove a
 
 **Background jobs**: card headers open the focused task panel. Click the card body or use `Ctrl+O` to toggle the command between its first statement and full script. Commands and output use separate colored edges with `❯` (`>` on Windows) and `≡` on their first rows; output always stays at the latest two visible rows. `/jobs` and the side panel keep the full output scrollable, while `e` toggles the focused command. Consecutive blank script lines collapse to one.
 
-**Background sessions**: On the DSH backend, `/bg` or `←` on an empty prompt backgrounds the current session and opens the session manager; `Esc` returns to it. Background sessions run in this process and stop when the TUI exits. Logs survive. On Claude/Codex, those entries open the session manager without backgrounding the session.
+**Background sessions**: On the DSH backend, `/bg` or `←` on an empty prompt backgrounds the current session and opens the session manager; `Esc` returns to it. An ongoing `/compact` keeps running, and returning restores its progress and cancel action. Background sessions run in this process and stop when the TUI exits. Logs survive. On Claude/Codex, those entries open the session manager without backgrounding the session.
 
 Full commands: [Interaction and commands](docs/interaction.en.md).
 
